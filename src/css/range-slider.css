@@ -1,0 +1,48 @@
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.noUi-connect {
+  background-color: var(--color-alizarin-crimson);
+}
+
+.noUi-target {
+  height: 3px;
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+.noUi-handle::after,
+.noUi-handle::before {
+  display: none;
+}
+
+.noUi-handle {
+  background-color: var(--color-monza);
+  border: none;
+  border-radius: 50%;
+  box-shadow: none;
+  cursor: pointer;
+  filter: drop-shadow(0 0 8px var(--color-alizarin-crimson));
+  transition: background-color .3s ease;
+}
+
+.noUi-horizontal .noUi-handle {
+  right: -10px;
+  top: -8px;
+  height: 21px;
+  width: 21px;
+}
+
+.noUi-handle:focus {
+  background-color: red;
+}

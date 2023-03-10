@@ -1,4 +1,5 @@
 
+
 // Bg-slider
 const swiper = new Swiper('.swiper-container', {
   navigation: {
@@ -36,18 +37,72 @@ menuLinks.forEach(function (el) {
   })
 })
 
+
 // Complex-info
-// document.querySelectorAll('.catalog__tabs-link').forEach(currentComplex => {
-//   currentComplex.addEventListener('click', function (event) {
-//     const tabNo = this.closest('.catalog__tabs-item').dataset.target;
-//     const complexNo = this.dataset.tab;
-//     document.querySelectorAll(`.catalog__tabs-item[data-target="${tabNo}"] .catalog__tabs-item-down`).forEach(allCatalogTabsItems => {
-//       allCatalogTabsItems.classList.remove('catalog__tabs-item-down_active_true')
-//     });
-//     document.querySelector(`.catalog__tabs-item[data-target="${tabNo}"] .catalog__tabs-item-down[data-target="${complexNo}"]`).classList.add('catalog__tabs-item-down_active_true');
-//     event.preventDefault();
-//   })
-// })
+
+const tabs1 = new ComplexTabs('tab', {
+  isChanged: (tabs) => {
+    console.log(tabs);
+  }
+});
+
+
+// Filter-checkbox
+
+function check0() {
+  let chbox = document.getElementById('amount0');
+  let lbl = document.getElementById('l0');
+
+  if (chbox.checked) {
+    lbl.classList.add('checkbox-input_checked');
+  } else {
+    lbl.classList.remove('checkbox-input_checked');
+  }
+}
+
+function check1() {
+  let chbox = document.getElementById('amount1');
+  let lbl = document.getElementById('l1');
+
+  if (chbox.checked) {
+    lbl.classList.add('checkbox-input_checked');
+  } else {
+    lbl.classList.remove('checkbox-input_checked');
+  }
+}
+
+function check2() {
+  let chbox = document.getElementById('amount2');
+  let lbl = document.getElementById('l2');
+
+  if (chbox.checked) {
+    lbl.classList.add('checkbox-input_checked');
+  } else {
+    lbl.classList.remove('checkbox-input_checked');
+  }
+}
+
+function check3() {
+  let chbox = document.getElementById('amount3');
+  let lbl = document.getElementById('l3');
+
+  if (chbox.checked) {
+    lbl.classList.add('checkbox-input_checked');
+  } else {
+    lbl.classList.remove('checkbox-input_checked');
+  }
+}
+
+function check4() {
+  let chbox = document.getElementById('amount4');
+  let lbl = document.getElementById('l4');
+
+  if (chbox.checked) {
+    lbl.classList.add('checkbox-input_checked');
+  } else {
+    lbl.classList.remove('checkbox-input_checked');
+  }
+}
 
 // Complex select
 const complexSelect = document.querySelector('#complex-select');
@@ -57,4 +112,4 @@ const complexSelectSelection = new Choices(complexSelect, {
   allowHTML: true,
   placeholder: true,
   itemSelectText: ''
-})
+});
